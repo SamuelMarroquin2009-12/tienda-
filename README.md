@@ -1,25 +1,40 @@
-class Entidad:  # Ejemplo: Libro, Producto, Jugador
-    def __init__(self, p1, p2):
-        self.p1 = p1
-        self.p2 = p2
+Enunciado del Ejercicio: Sistema de Compras en una Tienda Virtual
+Descripción General
+Desarrollar un sistema de compras en una tienda virtual utilizando Programación Orientada a Objetos (POO). El sistema debe permitir la gestión de productos, la administración de un cliente y la simulación de una compra a través de un carrito de compras.
 
+Requisitos del Sistema
+El sistema debe contar con las siguientes tres clases:
 
-class Sistema:  # Ejemplo: Biblioteca, Tienda, Juego
-    def __init__(self):
-        self.lista = []
+Clase Producto
 
-    def agregar(self, objeto):
-        self.lista.append(objeto)
+Atributos:
+nombre (str): Nombre del producto.
+precio (float): Precio del producto.
+Métodos:
+mostrar_info(): Devuelve una cadena con el nombre y el precio del producto.
+Clase Cliente
 
+Atributos:
+nombre (str): Nombre del cliente.
+carrito (list): Lista de productos agregados al carrito de compras.
+Métodos:
+agregar_producto(producto: Producto): Agrega un producto al carrito.
+mostrar_carrito(): Muestra la lista de productos en el carrito.
+calcular_total(): Devuelve la suma total de los precios de los productos en el carrito.
+Clase Tienda
 
-# El Menú (Cópialo casi igual para el examen)
-def ejecutar():
-    sis = Sistema()
-    while True:
-        print("1. Agregar / 2. Mostrar / 3. Salir")
-        op = input("Seleccione: ")
-        if op == "1":
-            # Lógica de creación
-            pass
-        elif op == "3":
-            break
+Atributos:
+nombre (str): Nombre de la tienda.
+productos (list): Lista de productos disponibles en la tienda.
+Métodos:
+agregar_producto(producto: Producto): Agrega un producto a la tienda.
+mostrar_productos(): Muestra la lista de productos disponibles en la tienda.
+Interacción con el Usuario (Menú de Opciones)
+El sistema debe permitir al usuario interactuar a través de un menú en la consola con las siguientes opciones:
+
+Agregar producto a la tienda: Permite registrar un nuevo producto en la tienda con su nombre y precio.
+Mostrar productos de la tienda: Muestra todos los productos disponibles en la tienda.
+Agregar producto al carrito: Permite que el cliente agregue un producto disponible en la tienda a su carrito de compras.
+Mostrar carrito de compras: Muestra los productos que el cliente ha agregado al carrito.
+Calcular total de compra: Calcula y muestra el precio total de los productos en el carrito.
+Salir: Finaliza la ejecución del programa.
